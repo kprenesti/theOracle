@@ -1,0 +1,38 @@
+{
+  "name": "oracle",
+  "version": "1.0.0",
+  "description": "An SPA search utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kprenesti/theOracle.git"
+  },
+  "keywords": [
+    "Angular",
+    "Wikipedia",
+    "Google",
+    "SASS",
+    "API",
+    "requests",
+    "AJAX"
+  ],
+  "author": "Krista Prenesti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kprenesti/theOracle/issues"
+  },
+  "homepage": "https://github.com/kprenesti/theOracle#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3"
+  }
+}

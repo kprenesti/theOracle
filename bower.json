@@ -1,0 +1,33 @@
+{
+  "name": "theOracle",
+  "homepage": "https://github.com/kprenesti/theOracle",
+  "authors": [
+    "kprenesti <krista.prenesti@gmail.com>"
+  ],
+  "description": "A SPA search application",
+  "main": "index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "javascript",
+    "google",
+    "wikipedia",
+    "api",
+    "search"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "jquery": "^2.2.1"
+  }
+}
