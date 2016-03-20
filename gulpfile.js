@@ -11,8 +11,13 @@ var gulp = require('gulp'),
 
 //============= SETTING UP TASKS ==========//
 gulp.task('scripts', function(){
-  gulp.src('js/**/*.js')
-  .pipe()
+  gulp.src('js/**/*.js', '!js/**/*.min.js')
+  .pipe(plumber())
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: '.min.js'
+  }))
+  .pipe(gulp.dest('js'))
 });
 
 gulp.task('browser-sync', function() {
