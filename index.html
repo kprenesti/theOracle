@@ -5,13 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body ng-app="mainPage">
+<body ng-app="app">
   <a href=""><h1>The Oracle</h1></a>
-  <div id="search-space"></div>
-  <div id="google"></div>
-  <div id="wiki"></div>
-  <div id="magic8ball"></div>
+    <nav class="navigation">
+      <ul class="navLinks">
+        <li><a href="#Google">Google</a></li>
+        <li><a href="#Wiki">Wikipedia</a></li>
+        <li><a href="#Dictionary">Dictionary</a></li>
+      </ul>
+    </nav>
+    <div ng-view></div>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-</body></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="js/all.min.js"></script>
+</body>
 </html>
