@@ -7,13 +7,18 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
+    concat = require('gulp-concat'),
+    sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create();
 
 //============= SETTING UP TASKS ==========//
 gulp.task('scripts', function(){
   gulp.src(['js/**/*.js', '!js/**/*.min.js'])
   .pipe(plumber())
+  .pipe(sourcemaps.init())
+  .pipe(concat('all.js'))
   .pipe(uglify())
+  .pipe(sourcemaps.write())
   .pipe(rename({
     suffix: '.min'
   }))
