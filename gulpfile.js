@@ -11,11 +11,11 @@ var gulp = require('gulp'),
 
 //============= SETTING UP TASKS ==========//
 gulp.task('scripts', function(){
-  gulp.src('js/**/*.js', '!js/**/*.min.js')
+  gulp.src(['js/**/*.js', '!js/**/*.min.js'])
   .pipe(plumber())
   .pipe(uglify())
   .pipe(rename({
-    suffix: '.min.js'
+    suffix: '.min'
   }))
   .pipe(gulp.dest('js'))
 });
