@@ -1,0 +1,4 @@
+body {
+  background: url("../images/dest/swirlSky.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 100vh; }

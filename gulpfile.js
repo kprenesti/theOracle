@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
+    watch = require('gulp-watch'),
     browserSync = require('browser-sync').create();
 
 //============= SETTING UP TASKS ==========//
@@ -34,11 +35,10 @@ gulp.task('browser-sync', function() {
 }); //end browserSync
 
 gulp.task('styles', function() {
-    gulp.src('sass/**/*.scss')
+    gulp.src('css/sass/**/*.scss')
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'));
-    gulp.watch('sass/**/*.scss',['styles']);
 }); //end styles
 
 gulp.task('jpgs', function() {
@@ -49,9 +49,9 @@ gulp.task('jpgs', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('sass/**/*.scss', ['styles']);
+  gulp.watch('css/sass/**/*.scss', ['styles']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('images/src/*.jpg', ['jpgs']);
 });
 
-gulp.task('default', ['jpgs', 'styles', 'browser-sync', 'scripts']);
+gulp.task('default', ['watch', 'jpgs', 'styles', 'browser-sync', 'scripts']);
