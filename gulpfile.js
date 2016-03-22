@@ -42,10 +42,16 @@ gulp.task('styles', function() {
 }); //end styles
 
 gulp.task('jpgs', function() {
-    return gulp.src('src/img/*.jpg')
+    return gulp.src('images/src/*.jpg')
     .pipe(plumber())
     .pipe(imagemin({ progressive: true }))
-    .pipe(gulp.dest('images'));
+    .pipe(gulp.dest('images/dest'));
+});
+
+gulp.task('watch', function(){
+  gulp.watch('sass/**/*.scss', ['styles']);
+  gulp.watch('js/**/*.js', ['scripts']);
+  gulp.watch('images/src/*.jpg', ['jpgs']);
 });
 
 gulp.task('default', ['jpgs', 'styles', 'browser-sync', 'scripts']);
