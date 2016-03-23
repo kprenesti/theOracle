@@ -3,7 +3,7 @@ var app = angular.module('app', ['ngRoute'])
       $routeProvider
         .when('/',
         {
-          templateUrl:'home.html',
+          templateUrl:'templates/home.html',
           controller: 'mainCntrl'
         })
         .when('/Google',{

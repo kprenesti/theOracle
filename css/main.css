@@ -1,4 +1,48 @@
 body {
-  background: url("../images/dest/swirlSky.jpg") center center no-repeat;
-  background-size: cover;
+  background-color: #000000;
+  color: #eee;
   min-height: 100vh; }
+
+/*
+  ============== HEADER AND NAVIGATION ==============
+*/
+header {
+  float: left;
+  width: 15vw;
+  height: 90vh;
+  border-right: 1px solid lightgrey; }
+  header ul {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    header ul li {
+      display: block;
+      list-style: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 10px 0;
+      height: 40px; }
+      header ul li a {
+        color: white;
+        display: block;
+        height: 100%; }
+
+footer {
+  display: block;
+  overflow: hidden;
+  height: 15px;
+  width: 100vw;
+  color: #eee;
+  border-top: 1px solid lightgrey; }
+  footer p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    outline: 1px solid red; }
+    footer p:nth-child(2) {
+      text-align: right; }
+    footer p a {
+      text-decoration: none;
+      color: #936AD7; }
