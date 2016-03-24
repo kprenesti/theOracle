@@ -17,8 +17,8 @@ gulp.task('scripts', function(){
   gulp.src(['js/**/*.js', '!js/**/*.min.js'])
   .pipe(plumber())
   .pipe(sourcemaps.init())
-  .pipe(concat('all.js'))
-  .pipe(uglify())
+  .pipe(concat('concat.js'))
+  // .pipe(uglify())
   .pipe(sourcemaps.write())
   .pipe(rename({
     suffix: '.min'
