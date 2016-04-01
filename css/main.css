@@ -1,48 +1,118 @@
 body {
   background-color: #000000;
   color: #eee;
-  min-height: 100vh; }
+  height: 100vh;
+  background: url("../images/dest/universeBall.jpg") center center no-repeat;
+  background-size: cover; }
+
+.bodyWrap {
+  min-height: 80vh; }
+  .bodyWrap > .ng-scope {
+    height: 100%;
+    width: 100%; }
+
+.title {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 8px 4px 8px #000000; }
+
+.back {
+  display: block;
+  background-color: #55b6fc;
+  color: #eee;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Poiret One", cursive;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 3px solid #eee;
+  border-radius: 5px;
+  margin-top: 3em;
+  text-shadow: 1px 1px 2px #000000; }
 
 /*
   ============== HEADER AND NAVIGATION ==============
 */
-header {
-  float: left;
-  width: 15vw;
-  height: 90vh;
-  border-right: 1px solid lightgrey; }
-  header ul {
-    width: 100%;
-    margin: 0;
-    padding: 0; }
-    header ul li {
-      display: block;
-      list-style: none;
-      padding-left: 10px;
-      padding-right: 10px;
-      margin: 10px 0;
-      height: 40px; }
-      header ul li a {
-        color: white;
-        display: block;
-        height: 100%; }
-
 footer {
-  display: block;
+  display: flex;
+  flex-direction: row;
   overflow: hidden;
-  height: 15px;
-  width: 100vw;
+  justify-content: space-between;
+  width: 100%;
   color: #eee;
-  border-top: 1px solid lightgrey; }
+  position: fixed;
+  bottom: 0; }
   footer p {
     margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: 50%;
-    float: left;
-    outline: 1px solid red; }
-    footer p:nth-child(2) {
-      text-align: right; }
+    padding: 0 10px;
+    display: inline-block; }
     footer p a {
       text-decoration: none;
       color: #936AD7; }
+
+#homeView {
+  width: 100%;
+  min-height: 80vh; }
+  #homeView h1, #homeView p {
+    text-align: center; }
+  #homeView h1 {
+    font-family: "Cinzel Decorative", cursive; }
+  #homeView > ng-include > header {
+    position: relative;
+    top: 25vh;
+    width: 100%; }
+    #homeView > ng-include > header > nav {
+      width: 50vw;
+      margin: 0 auto; }
+      #homeView > ng-include > header > nav > ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        width: 100%; }
+        #homeView > ng-include > header > nav > ul > li {
+          display: inline-block;
+          float: left; }
+          #homeView > ng-include > header > nav > ul > li > a {
+            font-family: "Cinzel Decorative", cursive;
+            font-weight: 900;
+            font-size: 2.5em;
+            text-decoration: none;
+            text-shadow: 8px 4px 8px #000000;
+            color: #eee;
+            display: block; }
+
+#googleWrap {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 90vh;
+  margin: 0 auto; }
+  #googleWrap h1 {
+    display: block;
+    flex: 1 100%; }
+  #googleWrap #googleSearch {
+    flex: 2 100%; }
+
+#gsc-iw-id1.gsc-input-box {
+  padding: 5px; }
+
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+  padding-right: 0 !important; }
+
+#gsc-i-id1#gsc-i-id1 {
+  color: black; }
+
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+  border-color: #55b6fc !important;
+  background-color: #55b6fc !important;
+  box-shadow: 2px 2px 2px #000000;
+  background-image: none;
+  filter: none;
+  height: 100% !important;
+  margin-left: 0;
+  width: 20px !important; }

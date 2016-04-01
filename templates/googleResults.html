@@ -1,7 +1,5 @@
-<div id="googleWrap">
-  <h1 class="title">Google</h1>
-  <div id="googleSearch">
-    <script>
+<div id="googleResults">
+  <script>
     (function() {
       var cx = '003854069724469606937:dunmee1awbg';
       var gcse = document.createElement('script');
@@ -12,9 +10,6 @@
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(gcse, s);
     })();
-    </script>
-    <gcse:searchbox-only></gcse:searchbox-only>
-  </div><!--end googleSearchBar-->
-  <a class="back" href="#/">Choose a Different Source</a>
-</div><!--end googleWrap-->
-<ng-include src="templates/footer.html"></ng-include>
+  </script>
+  <gcse:searchresults-only></gcse:searchresults-only>
+</div>

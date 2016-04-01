@@ -1,0 +1,39 @@
+#homeView {
+  width: 100%;
+  min-height: 80vh;
+  h1, p {
+    text-align: center;
+  }
+  h1 {
+    font-family: $headerFont;
+  }
+  > ng-include > header {
+    position: relative;
+    top: 25vh;
+    width: 100%;
+    > nav {
+      width: 50vw;
+      margin: 0 auto;
+    > ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      >li {
+        display: inline-block;
+        float: left;
+        > a {
+          font-family: $headerFont;
+          font-weight: 900;
+          font-size: 2.5em;
+          text-decoration: none;
+          text-shadow: 8px 4px 8px $black;
+          color: $white;
+          display: block;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,37 @@
 body {
   background-color: $black;
   color: $white;
-  min-height: 100vh;
+  height: 100vh;
+  background: url('../images/dest/universeBall.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.bodyWrap {
+  min-height: 80vh;
+  > .ng-scope {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.title {
+  font-family: $headerFont;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 8px 4px 8px $black;
+}
+
+.back {
+  display: block;
+  background-color: $blue;
+  color: $white;
+  padding: 10px;
+  text-decoration: none;
+  font-family: $normalText;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 3px solid $white;
+  border-radius: 5px;
+  margin-top: 3em;
+  text-shadow: 1px 1px 2px $black;
 }
