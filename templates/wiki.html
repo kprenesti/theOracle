@@ -1,7 +1,11 @@
-<h1>Wikipedia</h1>
-{{message}}
-<form ng-submit="">
-  <input class="search" type="text" placeholder="Query the great Wiki of Ours..." />
-  <button ng-click="" type="submit"> Bestow your knowledge upon me! </button>
-  <button ng-click="" type="button"> Be random! </button>
-</form>
+<div id="wikiView">
+  <h1 class="title">Wikipedia</h1>
+  <form ng-submit="">
+    <div class="searchContainer">
+      <input class="search" type="text" placeholder="Query the great Wiki of Ours..." />
+      <button class="submit" ng-click="" type="submit"></button>
+    </div>
+    <button ng-click="" type="button"> Be random! </button>
+    <a class="back" href="#/">Choose a Different Source</a>
+  </form>
+</div>
