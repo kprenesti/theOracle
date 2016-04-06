@@ -6,25 +6,40 @@
   height: 90vh;
   align-content: center;
   justify-content: center;
+  font-family: $normalText;
+  font-weight: bolder;
+  font-size: 1.2em;
   form {
     width: 100%;
-    .searchContainer {
-      width: 100%;
-      height: 2em;
-      .search {
-        display: inline-block;
-        height: 100%;
-        padding: 5px 10px;
-        width: 80%;
-        background-image: $fa-var-search;
-      }
-      button.submit {
-        display: inline-block;
-        height: 100%;
-        width: 16%;
-        background-color: $blue;
-        color: $white;
-      }
+    text-align: center;
+    input.search {
+      display: inline-block;
+      height: 100%;
+      padding: 10px;
+      margin-left: 20px;
+      margin-right: 0;
+      width: 70%;
+      background-image: $fa-var-search;
+      border-radius: 5px 0 0 5px;
+      color: $black;
     }
+    button.submit {
+      display: inline-block;
+      height: 100%;
+      width: 15%;
+      padding: 10px 0;
+      margin-right: 20px;
+      margin-left: 0;
+      background-color: $lightPurple;
+      color: $white;
+      border-radius: 0 5px 5px 0;
+      text-shadow: 1px 1px 1px $black;
+    }
+  }
+  .random {
+    background-color: $lightPurple;
+    padding: 10px;
+    text-shadow: 1px 1px 1px $black;
+    margin-top: 3em;
   }
 }

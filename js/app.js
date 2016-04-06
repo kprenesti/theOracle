@@ -3,21 +3,10 @@ var app = angular.module('app', ['ngRoute'])
       $routeProvider
         .when('/',
         {
-          templateUrl:'templates/home.html',
+          templateUrl:'templates/wiki.html',
           controller: 'mainCntrl'
         })
-        .when('/Google',{
-          templateUrl:'templates/google.html',
-          controller: 'googleCntrl'
-        })
-        .when('/Wiki',{
-          templateUrl:'templates/wiki.html',
-          controller: 'wikiCntrl'
-        })
-        .when('/Dictionary', {
-          templateUrl: 'templates/dictionary.html',
-          controller: 'dictionaryCntrl'
-        })
+
         .otherwise({redirectTo:'/'});
       } //end routeProvider callback function
     ]); //end config
