@@ -1,9 +1,8 @@
 <div id="wikiView">
   <h1 class="title">Wikipedia</h1>
-  <form ng-submit="">
-    <input class="search" type="text" placeholder="Query the great Wiki of Ours..." />
+  <form ng-submit=mainCntrl.submitForm()>
+    <input class="search" type="text" ng-model="mainCntrl.query" />
     <button class="submit" ng-click="" type="submit">Submit</button>
   </form>
   <button class="random" ng-click="" type="button"> Show a Random Article </button>
 </div>
-<ng-include src="'templates/footer.html'"></ng-include>

@@ -1,12 +1,20 @@
-var app = angular.module('app', ['ngRoute'])
-  .config(['$routeProvider', function($routeProvider){
-      $routeProvider
-        .when('/',
-        {
-          templateUrl:'templates/wiki.html',
-          controller: 'mainCntrl'
-        })
-
-        .otherwise({redirectTo:'/'});
-      } //end routeProvider callback function
-    ]); //end config
+var app = angular.module('app', ['ui.router'])
+  .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'templates/wiki.html',
+        controller: 'mainCntrl as mainCntrl'
+      })
+      .state('results', {
+        url: '/results',
+        templateUrl: 'templates/results.html',
+        controller: 'resultsCntrl as resultsCntrl'
+      })
+      .state('articleView', {
+        url: '/article',
+        templateUrl: 'templates/article.html',
+        controller: 'articleCntrl as articleCntrl'
+      });
+    }); //end config

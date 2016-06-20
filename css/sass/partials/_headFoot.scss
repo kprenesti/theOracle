@@ -1,27 +1,47 @@
-/*
-  ============== HEADER AND NAVIGATION ==============
-*/
-///////////////  HEADER START ///////////////
-
-
 ///////////////  FOOTER START ///////////////
 footer {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  justify-content: space-between;
-  // height: 15px;
-  width: 100%;
-  color: $white;
+  display: block;
   position: fixed;
   bottom: 0;
+  max-height: 50px;
+  width: 100vw;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
   p {
     margin: 0;
-    padding: 0 10px;
     display: inline-block;
     a {
       text-decoration: none;
       color: $lightPurple;
+    }
+  }
+  p.right {
+    text-align: right;
+    position: absolute;
+    right: 10px;
+  }
+  p.left {
+    float: left !important;
+  }
+}
+@media (max-width: 775px){
+  footer {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    max-height: 3em;
+    p {
+    display: block;
+    text-align: center;
+  }
+  p.left, p.right {
+    position: static;
+    text-align: center;
+    width: 100%;
+    }
+    p.right {
+      display: none;
     }
   }
 }

@@ -13,6 +13,7 @@
     width: 100%;
     text-align: center;
     input.search {
+      letter-spacing: .15em;
       display: inline-block;
       height: 100%;
       padding: 10px;
@@ -23,13 +24,14 @@
       border-radius: 5px 0 0 5px;
       color: $black;
     }
-    button.submit {
+    button.submit{
+      letter-spacing: .15em;
       display: inline-block;
       height: 100%;
       width: 15%;
       padding: 10px 0;
       margin-right: 20px;
-      margin-left: 0;
+      margin-left: -6px;
       background-color: $lightPurple;
       color: $white;
       border-radius: 0 5px 5px 0;
@@ -37,9 +39,43 @@
     }
   }
   .random {
+    letter-spacing: .15em;
     background-color: $lightPurple;
     padding: 10px;
     text-shadow: 1px 1px 1px $black;
     margin-top: 3em;
+    color: $white;
   }
+}
+
+@media (max-width: 1015px){
+  #wikiView {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 600px){
+  #wikiView form {
+    background-color: rgba(211, 211, 211, .7);
+    padding: 1em;
+    width: 90%;
+    input.search {
+      letter-spacing: .15em;
+      display: block;
+      max-height: 2em;
+      padding: 0 !important;
+      margin: 0 auto;
+      width: 95%;
+      // background-image: $fa-var-search;
+      border-radius: 5px;
+      color: $black;
+    }
+    button.submit {
+        display: block;
+        width: 50%;
+        max-height: 2em;
+        margin: 1em auto;
+      }
+  }
+
 }

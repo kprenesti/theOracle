@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /*!
- *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -113,31 +113,31 @@
     transform: rotate(359deg); } }
 
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
@@ -1377,7 +1377,7 @@
 .fa-digg:before {
   content: ""; }
 
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: ""; }
 
 .fa-pied-piper-alt:before {
@@ -1503,6 +1503,7 @@
   content: ""; }
 
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: ""; }
 
@@ -2078,18 +2079,135 @@
 .fa-percent:before {
   content: ""; }
 
+.fa-gitlab:before {
+  content: ""; }
+
+.fa-wpbeginner:before {
+  content: ""; }
+
+.fa-wpforms:before {
+  content: ""; }
+
+.fa-envira:before {
+  content: ""; }
+
+.fa-universal-access:before {
+  content: ""; }
+
+.fa-wheelchair-alt:before {
+  content: ""; }
+
+.fa-question-circle-o:before {
+  content: ""; }
+
+.fa-blind:before {
+  content: ""; }
+
+.fa-audio-description:before {
+  content: ""; }
+
+.fa-volume-control-phone:before {
+  content: ""; }
+
+.fa-braille:before {
+  content: ""; }
+
+.fa-assistive-listening-systems:before {
+  content: ""; }
+
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: ""; }
+
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: ""; }
+
+.fa-glide:before {
+  content: ""; }
+
+.fa-glide-g:before {
+  content: ""; }
+
+.fa-signing:before,
+.fa-sign-language:before {
+  content: ""; }
+
+.fa-low-vision:before {
+  content: ""; }
+
+.fa-viadeo:before {
+  content: ""; }
+
+.fa-viadeo-square:before {
+  content: ""; }
+
+.fa-snapchat:before {
+  content: ""; }
+
+.fa-snapchat-ghost:before {
+  content: ""; }
+
+.fa-snapchat-square:before {
+  content: ""; }
+
+.fa-pied-piper:before {
+  content: ""; }
+
+.fa-first-order:before {
+  content: ""; }
+
+.fa-yoast:before {
+  content: ""; }
+
+.fa-themeisle:before {
+  content: ""; }
+
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: ""; }
+
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: ""; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
+
 * {
   box-sizing: border-box; }
 
 body {
   background-color: #000000;
+  position: relative;
   color: #eee;
   height: 100vh;
   background: url("../images/dest/universeBall.jpg") center center no-repeat;
   background-size: cover; }
 
+h1 {
+  margin: 0;
+  padding: .67em; }
+
 .bodyWrap {
-  min-height: 80vh; }
+  height: 100%;
+  position: relative; }
   .bodyWrap > .ng-scope {
     height: 100%;
     width: 100%; }
@@ -2114,25 +2232,47 @@ body {
   margin-top: 3em;
   text-shadow: 1px 1px 2px #000000; }
 
-/*
-  ============== HEADER AND NAVIGATION ==============
-*/
+@media (max-width: 350px) {
+  .title {
+    font-size: 2.5em; } }
+
 footer {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  justify-content: space-between;
-  width: 100%;
-  color: #eee;
+  display: block;
   position: fixed;
-  bottom: 0; }
+  bottom: 0;
+  max-height: 50px;
+  width: 100vw;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden; }
   footer p {
     margin: 0;
-    padding: 0 10px;
     display: inline-block; }
     footer p a {
       text-decoration: none;
       color: #936AD7; }
+  footer p.right {
+    text-align: right;
+    position: absolute;
+    right: 10px; }
+  footer p.left {
+    float: left !important; }
+
+@media (max-width: 775px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    max-height: 3em; }
+    footer p {
+      display: block;
+      text-align: center; }
+    footer p.left, footer p.right {
+      position: static;
+      text-align: center;
+      width: 100%; }
+    footer p.right {
+      display: none; } }
 
 #wikiView {
   display: flex;
@@ -2149,6 +2289,7 @@ footer {
     width: 100%;
     text-align: center; }
     #wikiView form input.search {
+      letter-spacing: .15em;
       display: inline-block;
       height: 100%;
       padding: 10px;
@@ -2159,18 +2300,45 @@ footer {
       border-radius: 5px 0 0 5px;
       color: #000000; }
     #wikiView form button.submit {
+      letter-spacing: .15em;
       display: inline-block;
       height: 100%;
       width: 15%;
       padding: 10px 0;
       margin-right: 20px;
-      margin-left: 0;
+      margin-left: -6px;
       background-color: #936AD7;
       color: #eee;
       border-radius: 0 5px 5px 0;
       text-shadow: 1px 1px 1px #000000; }
   #wikiView .random {
+    letter-spacing: .15em;
     background-color: #936AD7;
     padding: 10px;
     text-shadow: 1px 1px 1px #000000;
-    margin-top: 3em; }
+    margin-top: 3em;
+    color: #eee; }
+
+@media (max-width: 1015px) {
+  #wikiView {
+    width: 100vw; } }
+
+@media (max-width: 600px) {
+  #wikiView form {
+    background-color: rgba(211, 211, 211, 0.7);
+    padding: 1em;
+    width: 90%; }
+    #wikiView form input.search {
+      letter-spacing: .15em;
+      display: block;
+      max-height: 2em;
+      padding: 0 !important;
+      margin: 0 auto;
+      width: 95%;
+      border-radius: 5px;
+      color: #000000; }
+    #wikiView form button.submit {
+      display: block;
+      width: 50%;
+      max-height: 2em;
+      margin: 1em auto; } }
