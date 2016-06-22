@@ -1,6 +1,16 @@
-app.controller('mainCntrl', ['$http', function($http){
+app.controller('mainCntrl', ['$http', 'httpSvc', function($http, httpSvc){
   const mainCntrl = this;
-  this.submitForm = function() {
-    console.log(mainCntrl.query);
-  }
+   mainCntrl.results = [];
+   mainCntrl.submitForm = function(query) {
+    httpSvc.searchAPI(query).then(function(data){
+      mainCntrl.results.push(data.query.search);
+      console.log(mainCntrl.results);
+    });
+  } //end submitForm
+
+  // this.random = function(){
+  //   httpSvc.random(function(response){
+  //     return response;
+  //   }
+  // }
 }]);

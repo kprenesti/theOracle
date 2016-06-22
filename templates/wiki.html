@@ -1,8 +1,9 @@
 <div id="wikiView">
   <h1 class="title">Wikipedia</h1>
   <form ng-submit=mainCntrl.submitForm()>
-    <input class="search" type="text" ng-model="mainCntrl.query" />
-    <button class="submit" ng-click="" type="submit">Submit</button>
+    <input class="search" type="text" ng-model="mainCntrl.query" ng-model-options="{ debounce: 800 }"
+ />
+    <button class="submit" ng-click="mainCntrl.submitForm(mainCntrl.query)" type="submit">Submit</button>
   </form>
   <button class="random" ng-click="" type="button"> Show a Random Article </button>
 </div>
