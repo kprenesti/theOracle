@@ -1,16 +1,21 @@
-app.controller('mainCntrl', ['$http', 'httpSvc', function($http, httpSvc){
-  const mainCntrl = this;
-   mainCntrl.results = [];
-   mainCntrl.submitForm = function(query) {
-    httpSvc.searchAPI(query).then(function(data){
-      mainCntrl.results.push(data.query.search);
-      console.log(mainCntrl.results);
+app.controller('mainCntrl', ['$http', 'httpSvc', 'results', '$state', function($http, httpSvc, results, $state){
+  var main = this;
+  //  main.results = [];
+   main.submitForm = function(query) {
+    httpSvc.searchAPI(query)
+    .then(function(data){
+      var resultsArray = [];
+      var articles = data.query.pages;
+      for (var prop in articles){
+        resultsArray.push(articles[prop]);
+      }
+      results.list = resultsArray;
+      console.log(results.list);
     });
+    $state.go('results');
   } //end submitForm
 
-  // this.random = function(){
-  //   httpSvc.random(function(response){
-  //     return response;
-  //   }
-  // }
+  main.getRandom = function(){
+    $state.go('article');
+  }
 }]);
