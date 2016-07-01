@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
-    sourcemaps = require('gulp-sourcemaps'),
     watch = require('gulp-watch'),
     browserSync = require('browser-sync').create();
 
@@ -16,15 +15,30 @@ var gulp = require('gulp'),
 gulp.task('scripts', function(){
   gulp.src(['js/**/*.js', '!js/**/*.min.js'])
   .pipe(plumber())
-  .pipe(sourcemaps.init())
   .pipe(concat('concat.js'))
-  // .pipe(uglify())
-  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('dist/js'))
   .pipe(rename({
     suffix: '.min'
   }))
-  .pipe(gulp.dest('js'))
-});
+  .pipe(gulp.dest('dist/js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('dist/js'));
+}); //end scripts
+
+gulp.task('jpgs', function() {
+    return gulp.src('images/src/*.jpg')
+    .pipe(plumber())
+    .pipe(imagemin({ progressive: true }))
+    .pipe(gulp.dest('dist/img'));
+}); //end jpg
+
+gulp.task('styles', function() {
+    gulp.src('css/sass/**/*.scss')
+        .pipe(plumber())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css/'))
+        .pipe(browserSync.stream());
+}); //end styles
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -33,20 +47,6 @@ gulp.task('browser-sync', function() {
         }
     });
 }); //end browserSync
-
-gulp.task('styles', function() {
-    gulp.src('css/sass/**/*.scss')
-        .pipe(plumber())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'));
-}); //end styles
-
-gulp.task('jpgs', function() {
-    return gulp.src('images/src/*.jpg')
-    .pipe(plumber())
-    .pipe(imagemin({ progressive: true }))
-    .pipe(gulp.dest('images/dest'));
-});
 
 gulp.task('watch', function(){
   gulp.watch('css/sass/**/*.scss', ['styles']);

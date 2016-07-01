@@ -2198,7 +2198,7 @@ body {
   position: relative;
   color: #eee;
   height: 100vh;
-  background: url("../images/dest/universeBall.jpg") center center no-repeat;
+  background: url("../dist/img/universeBall.jpg") center center no-repeat;
   background-size: cover; }
 
 h1 {

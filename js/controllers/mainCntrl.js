@@ -1,4 +1,4 @@
-app.controller('mainCntrl', ['$http', 'httpSvc', 'results', '$state', function($http, httpSvc, results, $state){
+app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($http, httpSvc, setData, $state){
   var main = this;
   //  main.results = [];
    main.submitForm = function(query) {
@@ -9,13 +9,12 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'results', '$state', function($
       for (var prop in articles){
         resultsArray.push(articles[prop]);
       }
-      results.list = resultsArray;
-      console.log(results.list);
+      setData.storeData(resultsArray);
     });
     $state.go('results');
   } //end submitForm
 
   main.getRandom = function(){
-    $state.go('article');
-  }
+    $state.go('articleView');
+  };
 }]);

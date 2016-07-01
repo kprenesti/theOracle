@@ -1,5 +1,5 @@
-angular.module('app').controller('resultsCntrl', ['$state', 'results', function($state, results){
+angular.module('app').controller('resultsCntrl', ['$state', 'setData', function($state, setData){
   var List = this;
-  List.results = results.returnResults();
-  console.log(List.results);
+  List.results = setData.getData();
+  console.log('From the resultsCntrl: ', List.results);
 }]);
