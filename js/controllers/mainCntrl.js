@@ -2,17 +2,12 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
   var main = this;
   //  main.results = [];
    main.submitForm = function(query) {
-    httpSvc.searchAPI(query)
-    .then(function(data){
-      var resultsArray = [];
-      var articles = data.query.pages;
-      for (var prop in articles){
-        resultsArray.push(articles[prop]);
-      }
-      setData.storeData(resultsArray);
-    });
+    httpSvc.searchAPI(query).then(function(data){
+      setData.storeData(data);
+      console.log(setData.articles);
+    }); //end .then
     $state.go('results');
-  } //end submitForm
+}; //end submitForm()
 
   main.getRandom = function(){
     $state.go('articleView');

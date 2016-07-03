@@ -17,29 +17,4 @@ angular.module('app')
       }; //end searchAPI
 
   return httpSvc;
-}])
-
-.service('setData', [function(){
-  var setter = this;
-  setter.list = [];
-  setter.storeData = function(array){
-    array.forEach(function(item){
-      setter.list.push(item);
-    });
-    return setter.list;
-    // console.log('From setter.storeData: ', setter.list);
-    // console.log('setData service type is ', setter);
-  }
-  setter.getData = function(){
-    console.log('From setter.getData: ',setter.list);
-  }
-  return setter;
 }]);
-
-// .service('getData', ['setData', function(setData){
-//   var getter = this;
-//   getter.returnResults = function(obj){
-//     console.log('From the setData.returnResults(): ', obj.list );
-//     return obj.list;
-//   };
-// }]);

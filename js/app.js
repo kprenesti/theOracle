@@ -4,13 +4,13 @@ var app = angular.module('app', ['ui.router'])
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'templates/wiki.html',
+        templateUrl: 'templates/search.html',
         controller: 'mainCntrl as main'
       })
       .state('results', {
         url: '/results',
         templateUrl: 'templates/results.html',
-        controller: 'resultsCntrl as resultCntrl'
+        controller: 'resultsCntrl as results'
       })
       .state('articleView', {
         url: '/article',

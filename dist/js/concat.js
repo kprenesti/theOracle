@@ -4,13 +4,13 @@ var app = angular.module('app', ['ui.router'])
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'templates/wiki.html',
+        templateUrl: 'templates/search.html',
         controller: 'mainCntrl as main'
       })
       .state('results', {
         url: '/results',
         templateUrl: 'templates/results.html',
-        controller: 'resultsCntrl as resultCntrl'
+        controller: 'resultsCntrl as results'
       })
       .state('articleView', {
         url: '/article',
@@ -38,32 +38,21 @@ angular.module('app')
       }; //end searchAPI
 
   return httpSvc;
-}])
-
-.service('setData', [function(){
-  var setter = this;
-  setter.list = [];
-  setter.storeData = function(array){
-    array.forEach(function(item){
-      setter.list.push(item);
-    });
-    return setter.list;
-    // console.log('From setter.storeData: ', setter.list);
-    // console.log('setData service type is ', setter);
-  }
-  setter.getData = function(){
-    console.log('From setter.getData: ',setter.list);
-  }
-  return setter;
 }]);
 
-// .service('getData', ['setData', function(setData){
-//   var getter = this;
-//   getter.returnResults = function(obj){
-//     console.log('From the setData.returnResults(): ', obj.list );
-//     return obj.list;
-//   };
-// }]);
+angular.module('app')
+.factory('setData', function(){
+  return {
+    storeData : function(data){
+    var list = data.query.pages;
+    this.articles = [];
+    for(prop in list){
+      this.articles.push(list[prop]);
+    }
+    return this.articles;
+    }
+  }
+});
 
 app.controller('articleCntrl', ['results', function(results){
   var articleContent = this;
@@ -76,17 +65,12 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
   var main = this;
   //  main.results = [];
    main.submitForm = function(query) {
-    httpSvc.searchAPI(query)
-    .then(function(data){
-      var resultsArray = [];
-      var articles = data.query.pages;
-      for (var prop in articles){
-        resultsArray.push(articles[prop]);
-      }
-      setData.storeData(resultsArray);
-    });
+    httpSvc.searchAPI(query).then(function(data){
+      setData.storeData(data);
+      console.log(setData.articles);
+    }); //end .then
     $state.go('results');
-  } //end submitForm
+}; //end submitForm()
 
   main.getRandom = function(){
     $state.go('articleView');
@@ -94,7 +78,8 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
 }]);
 
 angular.module('app').controller('resultsCntrl', ['$state', 'setData', function($state, setData){
-  var List = this;
-  List.results = setData.getData();
-  console.log('From the resultsCntrl: ', List.results);
+  var vm = this;
+  vm.data = setData;
+  vm.articles = vm.data.articles;
+  console.log(vm.articles);
 }]);
