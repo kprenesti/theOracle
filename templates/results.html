@@ -1,7 +1,9 @@
 <a class="backBtn" ui-sref="home">Go Back</a>
 <div id="resultsList">
   <ul>
-    <!-- <li class="result" ng-repeat="result in results">
-    </li>  -->
+    <li class="result"  ng-repeat="article in results.articles">
+      <a ng-href="/article/{{article.pageid}}"><h2>{{article.title}}</h2></a>
+      <p>{{article.extract}}</p>
+    </li>
   </ul>
 </div>

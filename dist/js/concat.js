@@ -13,7 +13,7 @@ var app = angular.module('app', ['ui.router'])
         controller: 'resultsCntrl as results'
       })
       .state('articleView', {
-        url: '/article',
+        url: '/article/:id',
         templateUrl: 'templates/article.html',
         controller: 'articleCntrl as article'
       });
@@ -68,8 +68,8 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
     httpSvc.searchAPI(query).then(function(data){
       setData.storeData(data);
       console.log(setData.articles);
+      $state.go('results');
     }); //end .then
-    $state.go('results');
 }; //end submitForm()
 
   main.getRandom = function(){
@@ -81,5 +81,4 @@ angular.module('app').controller('resultsCntrl', ['$state', 'setData', function(
   var vm = this;
   vm.data = setData;
   vm.articles = vm.data.articles;
-  console.log(vm.articles);
 }]);

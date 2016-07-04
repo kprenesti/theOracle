@@ -5,8 +5,8 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
     httpSvc.searchAPI(query).then(function(data){
       setData.storeData(data);
       console.log(setData.articles);
+      $state.go('results');
     }); //end .then
-    $state.go('results');
 }; //end submitForm()
 
   main.getRandom = function(){

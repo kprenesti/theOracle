@@ -2,5 +2,4 @@ angular.module('app').controller('resultsCntrl', ['$state', 'setData', function(
   var vm = this;
   vm.data = setData;
   vm.articles = vm.data.articles;
-  console.log(vm.articles);
 }]);

@@ -13,7 +13,7 @@ var app = angular.module('app', ['ui.router'])
         controller: 'resultsCntrl as results'
       })
       .state('articleView', {
-        url: '/article',
+        url: '/article/:id',
         templateUrl: 'templates/article.html',
         controller: 'articleCntrl as article'
       });
