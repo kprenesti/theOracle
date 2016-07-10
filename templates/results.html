@@ -1,9 +1,12 @@
-<a class="backBtn" ui-sref="home">Go Back</a>
-<div id="resultsList">
-  <ul>
-    <li class="result"  ng-repeat="article in results.articles">
-      <a ng-href="/article/{{article.pageid}}"><h2>{{article.title}}</h2></a>
-      <p>{{article.extract}}</p>
-    </li>
-  </ul>
+<div id="resultsPage">
+  <a class="back" ui-sref="home">Go Back</a>
+  <h1 class="title">Results</h1>
+  <div id="resultsList">
+    <ul>
+      <li class="result" ng-repeat="article in results.articles">
+        <a ng-href="https://en.wikipedia.org/?curid={{article.pageid}}" target="_blank"><h2>{{article.title}}</h2></a>
+          <p>{{article.extract}}</p>
+      </li>
+    </ul>
+  </div>
 </div>
