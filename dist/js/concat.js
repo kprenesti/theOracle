@@ -72,9 +72,6 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
     }); //end .then
 }; //end submitForm()
 
-  main.getRandom = function(){
-    $state.go('articleView');
-  };
 }]);
 
 angular.module('app').controller('resultsCntrl', ['$state', 'setData', function($state, setData){

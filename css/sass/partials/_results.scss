@@ -1,7 +1,7 @@
 #resultsPage {
   max-height: 100vh;
   overflow: hidden;
-  padding: .5em 0 0 30px;
+  padding: .5em;
   #resultsList{
     width: 80%;
     max-height: 60vh;
@@ -9,6 +9,14 @@
     overflow-y: scroll;
     padding-right: 1em;
     // background-color: rgba(122, 122, 122, .4);
+    }
+    ::-webkit-scrollbar              { display: none;}
+    ::-webkit-scrollbar-button       { display: none;}
+    ::-webkit-scrollbar-track        { display: none;}
+    ::-webkit-scrollbar-track-piece  { display: none; }
+    ::-webkit-scrollbar-thumb        { display: none; }
+    ::-webkit-scrollbar-corner       { display: none; }
+    ::-webkit-resizer                { display: none; }
       ul{
       list-style-type: none;
     }
@@ -32,6 +40,13 @@
         // text-shadow: 2px 0px 2px $black;
         font-size: 1.2em;
       }
-    } //end .result
-  } // end resultsList
-} //end resultsPage
+    }
+  }
+
+
+@media (max-width: 750px){
+  #resultsList {
+    padding: 0;
+    width: 95%;
+  }
+}

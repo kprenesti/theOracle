@@ -2312,6 +2312,7 @@ footer {
       border-radius: 0 5px 5px 0;
       text-shadow: 1px 1px 1px #000000; }
   #wikiView .random {
+    text-decoration: none;
     letter-spacing: .15em;
     background-color: #936AD7;
     padding: 10px;
@@ -2332,7 +2333,6 @@ footer {
       letter-spacing: .15em;
       display: block;
       max-height: 2em;
-      padding: 0 !important;
       margin: 0 auto;
       width: 95%;
       border-radius: 5px;
@@ -2346,28 +2346,47 @@ footer {
 #resultsPage {
   max-height: 100vh;
   overflow: hidden;
-  padding: .5em 0 0 30px; }
+  padding: .5em; }
   #resultsPage #resultsList {
     width: 80%;
     max-height: 60vh;
     margin: 0 auto;
     overflow-y: scroll;
     padding-right: 1em; }
-    #resultsPage #resultsList ul {
-      list-style-type: none; }
-    #resultsPage #resultsList .result {
-      width: 100%;
-      display: block;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: .5em;
-      margin: .5em 0;
-      border-radius: 5px;
-      border: 3px solid #eee; }
-      #resultsPage #resultsList .result a {
-        text-decoration: none;
-        font-family: "Poiret One", cursive;
-        font-weight: bold;
-        color: #55b6fc; }
-      #resultsPage #resultsList .result p {
-        color: #eee;
-        font-size: 1.2em; }
+  #resultsPage ::-webkit-scrollbar {
+    display: none; }
+  #resultsPage ::-webkit-scrollbar-button {
+    display: none; }
+  #resultsPage ::-webkit-scrollbar-track {
+    display: none; }
+  #resultsPage ::-webkit-scrollbar-track-piece {
+    display: none; }
+  #resultsPage ::-webkit-scrollbar-thumb {
+    display: none; }
+  #resultsPage ::-webkit-scrollbar-corner {
+    display: none; }
+  #resultsPage ::-webkit-resizer {
+    display: none; }
+  #resultsPage ul {
+    list-style-type: none; }
+  #resultsPage .result {
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: .5em;
+    margin: .5em 0;
+    border-radius: 5px;
+    border: 3px solid #eee; }
+    #resultsPage .result a {
+      text-decoration: none;
+      font-family: "Poiret One", cursive;
+      font-weight: bold;
+      color: #55b6fc; }
+    #resultsPage .result p {
+      color: #eee;
+      font-size: 1.2em; }
+
+@media (max-width: 750px) {
+  #resultsList {
+    padding: 0;
+    width: 95%; } }

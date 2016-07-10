@@ -39,6 +39,7 @@
     }
   }
   .random {
+    text-decoration: none;
     letter-spacing: .15em;
     background-color: $lightPurple;
     padding: 10px;
@@ -63,7 +64,7 @@
       letter-spacing: .15em;
       display: block;
       max-height: 2em;
-      padding: 0 !important;
+      // padding: 0 !important;
       margin: 0 auto;
       width: 95%;
       // background-image: $fa-var-search;
@@ -77,5 +78,4 @@
         margin: 1em auto;
       }
   }
-
 }

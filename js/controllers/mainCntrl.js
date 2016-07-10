@@ -9,7 +9,4 @@ app.controller('mainCntrl', ['$http', 'httpSvc', 'setData', '$state', function($
     }); //end .then
 }; //end submitForm()
 
-  main.getRandom = function(){
-    $state.go('articleView');
-  };
 }]);
